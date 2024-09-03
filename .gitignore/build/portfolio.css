@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3A4A61;
+    color: #FF764B;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.icon-link {
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover .icon {
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center; /* Centraliza el contenido principal */
+    align-items: flex-start;
+    /*max-width: 1200px; /* Ancho máximo para todo el contenido */
+    margin: 0 auto; /* Añade márgenes en blanco a los lados */
+    padding: 0 20px; /* Padding lateral para márgenes internos */
+}
+
+.projects, .experience, .education {
+    margin-bottom: 2rem;
+    max-width: 900px; /* Reduce el ancho máximo para alinearlo */
+   
+}
+
+.project, .experience-item, .education-item {
+    background: #fff;
+    color: #000;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+.project img {
+    width: 250px; /* Aumenta el tamaño de las imágenes */
+    height: 250px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px; /* Ajusta el ancho del contenido del proyecto */
+}
+
+.project h3 {
+    margin: 0;
+}
+
+.project p {
+    margin: 5px 0 0 0;
+}
+
+/* Estilo para el aside */
+aside {
+    max-width: 300px;
+    margin-left: 20px;
+    margin-top: 60px; /* Baja un poco el aside para alinearlo con los proyectos */
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+.skills, .languages {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2E3A47;
+    color: #FF764B;
+}
+
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .main-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .experience, .education, .projects {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    aside {
+        margin-left: 0;
+        margin-top: 20px; /* Baja un poco el aside para alinearlo en pantallas pequeñas */
+    }
+}

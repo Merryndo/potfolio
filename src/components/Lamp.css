@@ -1,0 +1,14 @@
+/* src/components/Lamp.css */
+.lamp-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea al top del contenedor */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  position: relative;
+}
+
+.lamp-image {
+  width: 250px; /* Tamaño ajustable */
+  transform-origin: top center; /* El eje de rotación está en el top */
+  cursor: pointer; /* Cambia el cursor para indicar interactividad */
+}

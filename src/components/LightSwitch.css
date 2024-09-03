@@ -1,0 +1,75 @@
+/* src/components/LightSwitch.css */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #f0e68c,
+      0 0 10px #f0e68c,
+      0 0 20px #f0e68c,
+      0 0 40px #f0e68c,
+      0 0 80px #f0e68c,
+      0 0 90px #f0e68c,
+      0 0 100px #f0e68c,
+      0 0 150px #f0e68c;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.neon-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #f0e68c;
+  text-shadow: 
+    0 0 5px #f0e68c, 
+    0 0 10px #f0e68c, 
+    0 0 15px #f0e68c;
+  margin-bottom: 15px;
+  text-align: center;
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+.light-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.light-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
